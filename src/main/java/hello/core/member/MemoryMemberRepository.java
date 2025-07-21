@@ -15,4 +15,9 @@ public class MemoryMemberRepository implements MemberRepository {
     public void save(Member memeber){
         store.put(memeber.getId(),memeber);
     }
+
+    @Override
+    public Member findByUsername(String name){
+        return store.get(name);
+    }
 }

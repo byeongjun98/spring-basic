@@ -4,4 +4,6 @@ public interface MemberService {
     void join(Member member);
 
     Member findById(Long id);
+
+    Member findByUsername(String username);
 }

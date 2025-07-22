@@ -4,7 +4,7 @@ public interface MemberRepository {
 
     void save(Member member);
 
-    Member findById(Long id);
+    Member findById(Long memberId);
 
-    Member findByUsername(String name);
+//    Member findByUsername(String name);
 }

@@ -4,20 +4,20 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MemoryMemberRepository implements MemberRepository {
-    private Map<Long,Member> store = new HashMap<Long,Member>();
+    private static Map<Long,Member> store = new HashMap<Long,Member>();
 
     @Override
-    public Member findById(Long id) {
-        return store.get(id);
+    public Member findById(Long memberId) {
+        return store.get(memberId);
     }
 
     @Override
-    public void save(Member memeber){
-        store.put(memeber.getId(),memeber);
+    public void save(Member member){
+        store.put(member.getId(),member);
     }
 
-    @Override
-    public Member findByUsername(String name){
-        return store.get(name);
-    }
+//    @Override
+//    public Member findByUsername(String name){
+//        return store.get(name);
+//    }
 }

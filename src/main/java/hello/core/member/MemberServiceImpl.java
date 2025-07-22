@@ -4,8 +4,8 @@ public class MemberServiceImpl implements MemberService {
     private final MemberRepository memberRepository = new MemoryMemberRepository();
 
     @Override
-    public Member findById(Long id) {
-        return memberRepository.findById(id);
+    public Member findMember(Long memberId) {
+        return memberRepository.findById(memberId);
 
     }
 
@@ -14,8 +14,8 @@ public class MemberServiceImpl implements MemberService {
         memberRepository.save(member);
     }
 
-    @Override
-    public Member findByUsername(String username) {
-        return memberRepository.findByUsername(username);
-    }
+//    @Override
+//    public Member findByUsername(String username) {
+//        return memberRepository.findByUsername(username);
+//    }
 }

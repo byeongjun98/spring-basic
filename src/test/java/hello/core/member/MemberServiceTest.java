@@ -1,4 +1,4 @@
-package member;
+package hello.core.member;
 
 import hello.core.AppConfig;
 import hello.core.member.Grade;

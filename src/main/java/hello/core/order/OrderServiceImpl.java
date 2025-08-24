@@ -3,6 +3,8 @@ package hello.core.order;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /*
     이전 강의(17. 새로운 할인 정책 개발)에서 추가한 할인 정책(RateDiscountPolicy) 를 적용하려면 기존 FixDiscountPolicy를 주석으로 막고
@@ -15,11 +17,13 @@ import hello.core.member.MemberRepository;
     추상 : DiscountPolicy
     구현: FixDiscountPolicy, RateDiscountPolicy
  */
+@Component
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
+    @Autowired
     public  OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;

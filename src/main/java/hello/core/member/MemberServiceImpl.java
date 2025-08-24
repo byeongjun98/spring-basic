@@ -18,7 +18,12 @@ public class MemberServiceImpl implements MemberService {
         memberRepository.save(member);
     }
 
-//    @Override
+    // 테스트 용도
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
+    }
+
+    //    @Override
 //    public Member findByUsername(String username) {
 //        return memberRepository.findByUsername(username);
 //    }
